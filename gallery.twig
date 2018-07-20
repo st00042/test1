@@ -1,0 +1,39 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+	{% include "header.twig" %}
+
+	<div class="bk-pt-gallery gallery-page">
+	
+		<div class="slideshow-wrapper">
+		        {{widget('responsiveslideshow', 'responsiveslideshow',
+		              {'duration':'3',
+		                'transSpeed': '1000',
+		                'transType': 'fade',
+		                'showButtons': false,
+		                'showBullets': false,
+		                'allowPause': false,
+		                'allowLoop': true,
+		                'showDescription': false,
+		                'showTitle': false,
+		                'images':
+		                  [
+		                    {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/1.jpg'), 'title':'', 'description': ''},
+		                    {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/2.jpg'), 'title':'', 'description': ''},
+		                    {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/gallery/3.jpg'), 'title':'', 'description': ''}
+		                  ]
+		                })|raw}}
+		</div>
+	
+		<div class="canvas">
+			<div class="main wrapper clearfix">
+				{{zone('main')|raw}}
+			</div>
+		</div>
+	
+	</div>
+	
+
+
+{% endblock %}
